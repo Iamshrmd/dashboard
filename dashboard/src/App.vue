@@ -5,11 +5,12 @@ export default {
   components:{Sidebar,dashboardInformation},
   data(){
     return{
+      dashTitle:'',
       iconImgs : [
         {
           titleVisible:false,
           title:"dashboard",
-          iconVisible:true,
+          iconVisible:false,
           imgVisible:false,
           img:"src/assets/icons/home.png",
           blackImg:"src/assets/icons/home-black.png",
@@ -107,18 +108,20 @@ export default {
         }
       });
     },
-    showDashItem(i){
+    showDashItem(i,title){
+      this.dashTitle = title
       this.iconImgs.forEach((icon,index) => {
         if (i == index) {
           icon.imgVisible = true
         }else {
           icon.imgVisible = false
         }
+        icon.iconVisible =false
         icon.titleVisible= true
-        icon.iconVisible=false
       });
     },
-    removeBlackImgs(){
+    removeBlackImgs(title){
+      this.dashTitle = title
       this.iconImgs.forEach(icon =>{
         icon.imgVisible = false
       })
@@ -128,8 +131,9 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full min-h-screen overflow-hidden">
+  <div class="w-full h-full min-h-screen flex gap-x-2 overflow-hidden py-12" :class="{'gap-x-0': dashTitle}">
     <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
+    <dashboardInformation :dashTitle="dashTitle"/>
   </div>
 </template>
 
