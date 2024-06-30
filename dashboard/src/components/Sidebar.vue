@@ -7,7 +7,7 @@
             <span class="inline-block w-2.5 h-2.5 bg-[#029F04] rounded-full"></span>
         </div>
         <div class="flex flex-col h-full gap-y-9 w-full">
-            <div @click="showdashitem(icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :key="i" class="w-full flex items-center justify-center relative">
+            <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :key="i" class="w-full flex items-center justify-center relative" :class="{'bg-[red]': icon.titleVisible}">
                 <a href="#"><img class="w-3.5 h-3.5" :src="`${icon.img}`"></a>
                 <span v-if="icon.iconVisible" class="inline-block w-[3px] h-[200%] bg-[#A9DFD8] absolute right-0 rounded"></span>
             </div>
@@ -29,8 +29,8 @@ export default {
         toggleIcon(i){
             this.$emit('toggleIcon',i)
         },
-        showdashitem(title){
-            this.$emit('showdashitem',title)
+        showdashitem(i,title){
+            this.$emit('showdashitem',i)
             const sideBar = document.querySelector('.sidebar')
             if (sideBar.style.width == '88px') {
                 sideBar.style.width='132px'
@@ -39,7 +39,7 @@ export default {
 
             }
             this.dashItem = title
-            console.log(sideBar.style.width);
+
         }
     }
 }
