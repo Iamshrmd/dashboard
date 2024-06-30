@@ -5,7 +5,7 @@ export default {
   components:{Sidebar,dashboardInformation},
   data(){
     return{
-      dashTitle:'',
+      dashTitle:'dashboard',
       iconImgs : [
         {
           titleVisible:false,
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full min-h-screen flex gap-x-2 overflow-hidden py-12" :class="{'gap-x-0': dashTitle}">
+  <div class="w-full h-full min-h-screen flex gap-x-0 overflow-hidden" :class="{'gap-x-0': dashTitle}">
     <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
     <dashboardInformation :dashTitle="dashTitle"/>
   </div>

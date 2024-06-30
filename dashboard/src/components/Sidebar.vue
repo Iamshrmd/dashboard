@@ -1,6 +1,6 @@
 <template>
-  <section class="relative ">
-    <aside @click.self="closeSideBar()" class="sidebar transition-all duration-500 bg-[#171821] w-[88px] h-[800px] rounded-xl py-6 flex flex-col gap-y-10 items-center"  :class="{'w-[160px] rounded-tl-3xl rounded-bl-3xl rounded-tr-none rounded-br-none border-r border-[#2c2d33]':sideBarWidth}">
+  <section class="relative">
+    <aside @click.self="closeSideBar()" class="sidebar transition-all duration-500 bg-[#171821] w-[88px] h-[800px] rounded-tl-xl rounded-bl-xl py-6 flex flex-col gap-y-10 items-center border-r border-[#2c2d33]"  :class="{'w-[160px] rounded-tl-3xl rounded-bl-3xl rounded-tr-none rounded-br-none ':sideBarWidth}">
         <div class="flex justify-items-start gap-x-1 w-full px-6">
             <span class="inline-block w-2.5 h-2.5 bg-[#EA1701] rounded-full"></span>
             <span class="inline-block w-2.5 h-2.5 bg-[#FEB002] rounded-full"></span>
@@ -51,7 +51,7 @@ export default {
                 iconDivs.forEach(div => {
                 div.classList.remove('selectedDiv')
                 div.classList.remove('allDivs')
-                this.$emit('removeBlackImgs','')
+                this.$emit('removeBlackImgs','dashboard')
             });
             }
 
