@@ -111,10 +111,9 @@ export default {
     showDashItem(i,title){
       this.dashTitle = title
       this.iconImgs.forEach((icon,index) => {
+        icon.imgVisible = false
         if (i == index) {
           icon.imgVisible = true
-        }else {
-          icon.imgVisible = false
         }
         icon.iconVisible =false
         icon.titleVisible= true
