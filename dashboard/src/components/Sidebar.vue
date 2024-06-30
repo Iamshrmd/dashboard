@@ -7,13 +7,13 @@
             <span class="inline-block w-2.5 h-2.5 bg-[#029F04] rounded-full"></span>
         </div>
         <div class="flex flex-col  gap-y-9 h-full w-full px-4 relative">
-            <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :key="i" class="w-full h-9 flex items-center justify-around rounded-md" :class="{'bg-[#A9DFD8]': icon.titleVisible}">
+            <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :data-id="i" :key="i" class="iconDiv w-full h-9 flex items-center justify-around rounded-md">
                 <a href="#">
-                    <img class="w-3 h-3" :src="`${icon.img}`" :class="{'hidden': icon.titleVisible}">
-                    <img class="w-3 h-3" :src="`${icon.blackImg}`" :class="{'hidden': !icon.titleVisible}">
+                    <img class="w-3.5 h-3.5" :src="`${icon.img}`" >
+                    <img class="w-3.5 h-3.5" :src="`${icon.blackImg}`" >
                 </a>
                 <span v-if="icon.iconVisible" class="inline-block w-[3px] h-9 bg-[#A9DFD8] absolute right-0 rounded"></span>
-                <label v-if="icon.titleVisible" class="text-xs font-semibold">{{ icon.title }}</label>
+                <span v-show="icon.titleVisible" class="title text-xs font-bold capitalize text-[#87888C]">{{ icon.title }}</span>
             </div>
         </div>
     </aside>
@@ -37,15 +37,24 @@ export default {
         showdashitem(i,title){
             this.$emit('showdashitem',i)
             const sideBar = document.querySelector('.sidebar')
-            console.log(sideBar.classList);
-            sideBar.classList.add('!w-[132px]')
-            console.log(sideBar.classList);
+            sideBar.classList.add('!w-[142px]')
             this.dashItem = title
+            const iconDivs = document.querySelectorAll('.iconDiv')
+            iconDivs.forEach(div => {
+                if (div.dataset.id == i) {
+                    console.log(div.querySelector('.title'));
+                    div.classList.toggle('bg-[#A9DFD8]')
+                    div.querySelector('.title').classList.toggle('text-[#000]')
+                }
+            });
         }
     }
 }
 </script>
 
 <style>
-
+    .selectedIcon{
+        background-color: #A9DFD8;
+        color:#000;
+    }
 </style>

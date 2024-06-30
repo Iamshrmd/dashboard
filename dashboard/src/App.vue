@@ -88,12 +88,12 @@ export default {
     },
     showDashItem(i){
       this.iconImgs.forEach((icon,index) => {
-        if (i == index) {
-          icon.titleVisible = !icon.titleVisible
-        }else {
-          icon.titleVisible = false
-        }
-        icon.iconVisible= false
+        // if (i == index) {
+        //   icon.titleVisible = !icon.titleVisible
+        // }else {
+        //   icon.titleVisible = false
+        // }
+        icon.titleVisible= true
       });
     }
   }
