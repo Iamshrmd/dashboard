@@ -47,6 +47,11 @@ export default {
           img:"src/assets/icons/Group (9).png"
         },
         {
+          title:"Signout",
+          iconVisible:false,
+          img:"src/assets/icons/Vector (6).png"
+        },
+        {
           title:"Favourite",
           iconVisible:false,
           img:"src/assets/icons/Vector (7).png"
@@ -56,11 +61,6 @@ export default {
           iconVisible:false,
           img:"src/assets/icons/Vector (8).png"
         },
-        {
-          title:"Signout",
-          iconVisible:false,
-          img:"src/assets/icons/Vector (9).png"
-        }
       ]
     }
   },
