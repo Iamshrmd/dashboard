@@ -10,15 +10,16 @@ export default {
           titleVisible:false,
           title:"dashboard",
           iconVisible:true,
-          img:"src/assets/icons/home.png",
           imgVisible:false,
-          blackImg:"src/assets/icons/home-black.png"
+          img:"src/assets/icons/home.png",
+          blackImg:"src/assets/icons/home-black.png",
         },
         {
           titleVisible:false,
           title:"Profile",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (1).png"
         },
         {
@@ -26,6 +27,7 @@ export default {
           title:"Leaderboard",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (2).png"
         },
         {
@@ -33,6 +35,7 @@ export default {
           title:"Order",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (3).png"
         },
         {
@@ -40,6 +43,7 @@ export default {
           title:"Product",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (10).png"
         },
         {
@@ -47,6 +51,7 @@ export default {
           title:"Sales Report",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (4).png"
         },
         {
@@ -54,6 +59,7 @@ export default {
           title:"Message",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (5).png"
         },
         {
@@ -61,6 +67,7 @@ export default {
           title:"Settings",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Group (9).png"
         },
         {
@@ -68,6 +75,7 @@ export default {
           title:"Signout",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (6).png"
         },
         {
@@ -75,6 +83,7 @@ export default {
           title:"Favourite",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (7).png"
         },
         {
@@ -82,6 +91,7 @@ export default {
           title:"History",
           imgVisible:false,
           iconVisible:false,
+          blackImg:"src/assets/icons/home-black.png",
           img:"src/assets/icons/Vector (8).png"
         },
       ]
@@ -100,13 +110,18 @@ export default {
     showDashItem(i){
       this.iconImgs.forEach((icon,index) => {
         if (i == index) {
-          icon.imgVisible = !icon.imgVisible
+          icon.imgVisible = true
         }else {
           icon.imgVisible = false
         }
         icon.titleVisible= true
         icon.iconVisible=false
       });
+    },
+    removeBlackImgs(){
+      this.iconImgs.forEach(icon =>{
+        icon.imgVisible = false
+      })
     }
   }
 }
@@ -114,7 +129,7 @@ export default {
 
 <template>
   <div class="w-full h-full min-h-screen overflow-hidden">
-    <Sidebar @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
+    <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
   </div>
 </template>
 
