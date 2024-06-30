@@ -10,7 +10,8 @@ export default {
           titleVisible:false,
           title:"dashboard",
           iconVisible:true,
-          img:"src/assets/icons/Vector (11).png"
+          img:"src/assets/icons/home.png",
+          blackImg:"src/assets/icons/home-black.png"
         },
         {
           titleVisible:false,

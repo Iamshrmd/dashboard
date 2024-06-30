@@ -6,10 +6,14 @@
             <span class="inline-block w-2.5 h-2.5 bg-[#FEB002] rounded-full"></span>
             <span class="inline-block w-2.5 h-2.5 bg-[#029F04] rounded-full"></span>
         </div>
-        <div class="flex flex-col h-full gap-y-9 w-full">
-            <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :key="i" class="w-full flex items-center justify-center relative" :class="{'bg-[red]': icon.titleVisible}">
-                <a href="#"><img class="w-3.5 h-3.5" :src="`${icon.img}`"></a>
-                <span v-if="icon.iconVisible" class="inline-block w-[3px] h-[200%] bg-[#A9DFD8] absolute right-0 rounded"></span>
+        <div class="flex flex-col  gap-y-9 h-full w-full px-4 relative">
+            <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :key="i" class="w-full h-9 flex items-center justify-around rounded-md" :class="{'bg-[#A9DFD8]': icon.titleVisible}">
+                <a href="#">
+                    <img class="w-3 h-3" :src="`${icon.img}`" :class="{'hidden': icon.titleVisible}">
+                    <img class="w-3 h-3" :src="`${icon.blackImg}`" :class="{'hidden': !icon.titleVisible}">
+                </a>
+                <span v-if="icon.iconVisible" class="inline-block w-[3px] h-9 bg-[#A9DFD8] absolute right-0 rounded"></span>
+                <label v-if="icon.titleVisible" class="text-xs font-semibold">{{ icon.title }}</label>
             </div>
         </div>
     </aside>
@@ -18,6 +22,7 @@
 </template>
 
 <script>
+
 export default {
     props:['iconImgs'],
     data() {
@@ -32,14 +37,10 @@ export default {
         showdashitem(i,title){
             this.$emit('showdashitem',i)
             const sideBar = document.querySelector('.sidebar')
-            if (sideBar.style.width == '88px') {
-                sideBar.style.width='132px'
-            } else {
-                sideBar.style.width='88px'
-
-            }
+            console.log(sideBar.classList);
+            sideBar.classList.add('!w-[132px]')
+            console.log(sideBar.classList);
             this.dashItem = title
-
         }
     }
 }
