@@ -132,7 +132,7 @@ export default {
 <template>
   <div class="w-full h-full min-h-screen flex gap-x-0 overflow-hidden" :class="{'gap-x-0': dashTitle}">
     <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
-    <!-- <dashboardInformation :dashTitle="dashTitle"/> -->
+    <dashboardInformation :dashTitle="dashTitle"/>
   </div>
 </template>
 

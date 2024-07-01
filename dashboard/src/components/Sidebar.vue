@@ -27,6 +27,7 @@ export default {
     data() {
         return{
             sideBarWidth:false,
+            Title:''
         }
     },
     methods:{
@@ -38,13 +39,14 @@ export default {
         showdashitem(i,title){
             this.$emit('showdashitem',i,title)
             this.sideBarWidth =true
-
+            this.Title= title
             this.selectIcon(i)
         },
         closeSideBar(){
             this.sideBarWidth = !this.sideBarWidth
             if (this.sideBarWidth) {
-                this.$emit('showdashitem',0,'dashboard')
+                console.log(this.Title);
+                this.$emit('showdashitem',0,this.Title)
                 this.selectIcon(0)
 
             }else if(!this.sideBarWidth){
@@ -52,7 +54,7 @@ export default {
                 iconDivs.forEach(div => {
                 div.classList.remove('selectedDiv')
                 div.classList.remove('allDivs')
-                this.$emit('removeBlackImgs','dashboard')
+                this.$emit('removeBlackImgs',this.Title)
             });
             }
 
@@ -77,7 +79,7 @@ export default {
  .selectedDiv{
     background-color: #A9DFD8;
     column-gap: 5px;
-    justify-content: space-around;
+    justify-content: space-evenly;
  }
  .allDivs{
     justify-content: flex-start;
