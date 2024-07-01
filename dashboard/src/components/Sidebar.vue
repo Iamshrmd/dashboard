@@ -27,7 +27,8 @@ export default {
     data() {
         return{
             sideBarWidth:false,
-            Title:''
+            Title:'',
+            index:0
         }
     },
     methods:{
@@ -40,14 +41,15 @@ export default {
             this.$emit('showdashitem',i,title)
             this.sideBarWidth =true
             this.Title= title
+            this.index = i
             this.selectIcon(i)
         },
         closeSideBar(){
             this.sideBarWidth = !this.sideBarWidth
             if (this.sideBarWidth) {
                 console.log(this.Title);
-                this.$emit('showdashitem',0,this.Title)
-                this.selectIcon(0)
+                this.$emit('showdashitem',this.index,this.Title)
+                this.selectIcon(this.index)
 
             }else if(!this.sideBarWidth){
                 const iconDivs = document.querySelectorAll('.iconDiv')
