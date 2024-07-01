@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-between mb-5">
+  <div class="flex items-center justify-between mb-7">
                 <div class="w-1/2 flex items-center bg-[#21222D] rounded-lg">
                     <div class="flex items-center justify-end w-10">
                         <img class="w-3.5 h-3" src="../assets/header/search.png" alt="">
