@@ -20,4 +20,7 @@ export default {
 
 <style>
 
+ .no-scrollbar::-webkit-scrollbar {
+    width: 0;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4 gap-4">
-    <div class="bg-[#21222D] rounded-[10px] flex flex-col gap-y-3 py-2 px-4 text-[#fff] col-span-3 h-fit ">
+  <div class="grid grid-cols-3 gap-4">
+    <div class="bg-[#21222D] rounded-[10px] flex flex-col gap-y-3 py-2 px-4 text-[#fff] col-span-2 h-fit ">
         <div class="flex flex-col gap-y-1">
             <h2 class="text-[15px]">Today’s Sales</h2>
             <p class="text-[#A0A0A0] text-[12px]">Sales Summary</p>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-[#21222D] rounded-[10px] px-4 py-2 text-[#fff] col-span-3 ...">
+    <div class="bg-[#21222D] rounded-[10px] px-4 py-2 text-[#fff] col-span-2 ...">
         <div class="flex flex-col gap-y-2">
             <h2 class="text-[15px]">Top Products</h2>
             <div class="flex flex-col gap-y-3">
@@ -90,7 +90,7 @@
                                 <span class="absolute bg-[#A9DFD8] w-4/6 h-full inline-block rounded"></span>
                             </span>
                         </div>
-                        <div class="w-[8%]"><span class="text-[12px] w-full py-1 px-2.5 bg-[#A9DFD8] bg-opacity-20 rounded border-[0.5px] border-[#A9DFD8] text-[#A9DFD8]">46%</span></div>
+                        <div class="w-[8%]"><span class="text-[12px] w-full py-1 px-2.5 bg-[#A9DFD8] bg-opacity-20 rounded border-[0.5px] border-[#A9DFD8] text-[#A9DFD8]">17%</span></div>
                     </div>
                     <div class="flex items-center justify-between border-t border-[#fff] border-opacity-10 py-2">
                         <div class="w-[5%]"><span class="text-[12px]">03</span></div>
@@ -100,7 +100,7 @@
                                 <span class="absolute bg-[#28AEF3] w-1/2 h-full inline-block rounded"></span>
                             </span>
                         </div>
-                        <div class="w-[8%]"><span class="text-[12px] w-full py-1 px-2.5 bg-[#2b2b36] bg-opacity-20 rounded border-[0.5px] border-[#28AEF3] text-[#28AEF3]">46%</span></div>
+                        <div class="w-[8%]"><span class="text-[12px] w-full py-1 px-2.5 bg-[#2b2b36] bg-opacity-20 rounded border-[0.5px] border-[#28AEF3] text-[#28AEF3]">19%</span></div>
                     </div>
                     <div class="flex items-center justify-between border-t border-[#fff] border-opacity-10 py-2">
                         <div class="w-[5%]"><span class="text-[12px]">04</span></div>
@@ -110,7 +110,7 @@
                                 <span class="absolute bg-[#F2C8ED] w-1/3 h-full inline-block rounded"></span>
                             </span>
                         </div>
-                        <div class="w-[8%]"><span class="text-[12px] w-full py-1.5 px-2.5 bg-[#F2C8ED] bg-opacity-20 rounded border-[0.5px] border-[#F2C8ED] text-[#F2C8ED]">46%</span></div>
+                        <div class="w-[8%]"><span class="text-[12px] w-full py-1.5 px-2.5 bg-[#F2C8ED] bg-opacity-20 rounded border-[0.5px] border-[#F2C8ED] text-[#F2C8ED]">29%</span></div>
                     </div>
                 </div>
             </div>
@@ -157,10 +157,16 @@
             </div>
         </div>
     </div>
-    <div class="bg-[#21222D] rounded-[10px] p-4 text-[#fff] col-span-3">
-        <div></div>
-        <div>
-            <img src="../" alt="">
+    <div class="bg-[#21222D] rounded-[10px] p-4 text-[#fff] col-span-2 flex flex-col gap-y-1">
+        <div class="flex itemc-center justify-between">
+            <h2 class="text-[15px]">Visitor Insights</h2>
+            <div class="flex items-center justify-center gap-x-2 bg-[#171821] rounded p-2">
+                <span class="bg-[#FCB859] inline-block w-1.5 h-1.5 rounded-full"></span>
+                <label class="text-[12px]">New Visitors</label>
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <img class="w-[95%]" src="../assets/dashboard/insight/Graph.png" alt="">
         </div>
     </div>
   </div>
