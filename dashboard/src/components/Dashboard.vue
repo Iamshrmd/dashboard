@@ -45,10 +45,10 @@
             <h2 class="text-[15px]">Level</h2>
         </div>
         <div class="flex justify-center">
-            <img class="h-24 w-44" src="../assets/dashboard/level/Bars.png">
+            <img class="h-32 w-[70%]" src="../assets/dashboard/level/Bars.png">
         </div>
         <div class="w-full flex justify-center">
-            <div class="flex w-44 h-full justify-between">
+            <div class="flex w-56 h-full justify-between">
                 <div class="flex items-center gap-x-2">
                     <span class="h-2 w-2 inline-block bg-[#A9DFD8] rounded-full"></span>
                     <label class="text-[12px] font-medium text-[#A0A0A0]">Volume</label>
@@ -121,7 +121,7 @@
             <h2 class="text-[15px]">Customer Fulfilment</h2>
         </div>
         <div class="flex justify-center">
-            <img class="h-28 w-full" src="../assets/dashboard/level/Graph.png">
+            <img class="h-44 w-full" src="../assets/dashboard/level/Graph.png">
         </div>
         <span class="inline-block h-px w-full bg-[#fff] opacity-5"></span>
         <div class="w-full flex justify-center">
@@ -152,8 +152,8 @@
         <div class="flex flex-col gap-y-3 justify-between">
             <span class="text-2xl text-[#A9DFD8] font-bold">$6078.76</span>
             <p class="text-[#87888C] text-[11px]">Profit is 48% More than last Month</p>
-            <div class="flex items-center justify-center">
-                <img class="w-3/4" src="../assets/dashboard/earings/Percentage meter.png" alt="">
+            <div class="flex items-center justify-center w-[100%]">
+                <img class="w-[90%]" src="../assets/dashboard/earings/Percentage meter.png" alt="">
             </div>
         </div>
     </div>
