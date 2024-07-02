@@ -44,6 +44,8 @@
         <div>
             <h2 class="text-[15px]">Level</h2>
         </div>
+        <!-- <SaleChart/> -->
+        <FirstChart/>
         <div class="flex justify-center">
             <img class="h-32 w-[70%]" src="../assets/dashboard/level/Bars.png">
         </div>
@@ -173,8 +175,9 @@
 </template>
 
 <script>
+import FirstChart from './FirstChart.vue'
 export default {
-
+  components: {FirstChart}
 }
 </script>
 
