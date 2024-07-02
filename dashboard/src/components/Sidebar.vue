@@ -9,7 +9,7 @@
         <div class="flex flex-col gap-y-5 h-full w-full px-4 relative">
             <div @click="showdashitem(i,icon.title)" @mouseenter="toggleIcon(i)" v-for="(icon,i) in iconImgs" :data-id="i" :key="i" class="iconDiv hover:cursor-pointer w-full h-9 flex items-center justify-center rounded-md">
                 <a class="flex items-center" href="#">
-                    <img class="w-3.5 h-3.5" :src="`${icon.img}`" :class="{'hidden' : icon.imgVisible}">
+                    <img class="w-4 h-4" :src="`${icon.img}`" :class="{'hidden' : icon.imgVisible}">
                     <img class="w-3.5 h-3.5" :src="`${icon.blackImg}`" :class="{'hidden' : !icon.imgVisible}">
                 </a>
                 <span v-show="sideBarWidth" class="title text-xs capitalize text-[#87888C]">{{ icon.title }}</span>
