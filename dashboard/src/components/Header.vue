@@ -16,7 +16,7 @@
                     <div class="panel transition-all duration-500 absolute top-full opacity-0 w-24 right-0 bg-[#171821] bg-opacity-80 rounded">
                         <div class="flex items-center justify-between">
                             <img class="w-4 h-4 grayscale-100" src="../assets/icons/icons8-female-user-26.png">
-                            <span class="text-xs">Edit Profile</span>
+                            <span class="text-xs text-[#fff]">Edit Profile</span>
                         </div>
                     </div>
                 </div>
