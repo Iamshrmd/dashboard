@@ -4,7 +4,7 @@
                     <div class="flex items-center justify-end w-10">
                         <img class="w-3.5 h-3" src="../assets/header/search.png" alt="">
                     </div>
-                    <input class="w-full h-11 outline-0 px-2 rounded-tr-lg rounded-br-lg bg-[#21222D] text-xs"  placeholder="Search Here" type="text">
+                    <input class="w-full h-11 text-[#fff] outline-0 px-2 rounded-tr-lg rounded-br-lg bg-[#21222D] text-xs"  placeholder="Search Here" type="text">
                 </div>
                 <div class="flex items-center justify-end gap-x-4 relative py-2">
                     <div class="relative">
