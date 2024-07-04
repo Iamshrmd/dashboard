@@ -40,16 +40,15 @@
             </div>
         </div>
     </div>
-    <div class="bg-[#21222D] rounded-[10px] py-3 px-4 h-full text-[#fff] flex flex-col justify-between gap-y-5 ">
+    <div class="bg-[#21222D] rounded-[10px] py-3 px-4 h-full text-[#fff] flex flex-col justify-between gap-y-0 ">
         <div>
             <h2 class="text-[15px]">Level</h2>
         </div>
-        <!-- <SaleChart/> -->
         <FirstChart/>
-        <div class="flex justify-center">
+        <!-- <div class="flex justify-center">
             <img class="h-32 w-[70%]" src="../assets/dashboard/level/Bars.png">
-        </div>
-        <div class="w-full flex justify-center">
+        </div> -->
+        <!-- <div class="w-full flex justify-center">
             <div class="flex w-56 h-full justify-between">
                 <div class="flex items-center gap-x-2">
                     <span class="h-2 w-2 inline-block bg-[#A9DFD8] rounded-full"></span>
@@ -61,7 +60,7 @@
                     <label class="text-[12px] font-medium text-[#A0A0A0]">Service</label>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="bg-[#21222D] rounded-[10px] px-4 py-2 text-[#fff] col-span-2 ...">
         <div class="flex flex-col gap-y-2">
