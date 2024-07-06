@@ -4,7 +4,7 @@
         <h3 class="text-center text-[#fff]">فرم ورود</h3>
         <span class="w-full bg-[#A9DFD8] h-px opacity-50"></span>
         <div  @keyup.enter="checkNumber(phoneNumber)" class="flex flex-col justify-center gap-y-5">
-            <input autofocus v-model="phoneNumber" class="block bg-opacity-10 bg-[#fff] text-[#A9DFD8] h-10 px-3 text-right rounded outline-none" type="text" placeholder="شماره موبایل">
+            <input maxlength="11" autofocus v-model="phoneNumber" class="block bg-opacity-10 bg-[#fff] text-[#A9DFD8] h-10 px-3 text-right rounded outline-none" type="text" placeholder="شماره موبایل">
             <button @click="checkNumber(phoneNumber)" class="submit-button h-10 rounded bg-[#A9DFD8] bg-opacity-10 text-[#A9DFD8] border border-[#A9DFD8]">تایید</button>
         </div>
     </div>
