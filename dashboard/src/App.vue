@@ -1,7 +1,6 @@
 <script>
 import { RouterView } from 'vue-router'
 export default {
-  components:{Sidebar,dashboardInformation,firstPage,loginForm,register,otp},
   data(){
     return{
       dashTitle:'dashboard',

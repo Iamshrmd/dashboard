@@ -6,8 +6,10 @@
 </template>
 
 <script>
+import dashboardInformation from '../components/dashboard/dashboardInformation.vue'
+import Sidebar from '../components/dashboard/Sidebar.vue'
 export default {
-    components:{Sidebar,dashboardInformation,firstPage,loginForm,register,otp},
+    components:{Sidebar,dashboardInformation},
   data(){
     return{
       dashTitle:'dashboard',
