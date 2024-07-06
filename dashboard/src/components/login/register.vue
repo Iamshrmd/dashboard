@@ -27,7 +27,7 @@ export default {
     return{
       userName:'',
       userLastName:'',
-      userPhone:null
+      phoneNumber:null
     }
   },
   methods:{
