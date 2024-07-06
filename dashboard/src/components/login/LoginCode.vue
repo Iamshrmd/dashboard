@@ -36,13 +36,16 @@ export default {
     methods:{
     CheckLoginCode(loginCode){
       axios
-      .post('https://core.ccgram.ir/api/v1/register/verify',{
+      .post('https://core.ccgram.ir/api/v1/login/verify-otp',{
         phone :  localStorage.getItem('phone'),
         code : parseInt(loginCode)
       })
       .then((response)=>{
         console.log(response);
-        console.log(response.data.message);
+        console.log(response.status);
+        if (condition) {
+            this.$router.push('/')
+        }
       })
       .catch((error)=>{
         console.log(error);
