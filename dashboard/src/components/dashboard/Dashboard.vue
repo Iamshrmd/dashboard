@@ -5,7 +5,7 @@
             <h2 class="text-[15px]">Today’s Sales</h2>
             <p class="text-[#A0A0A0] text-[12px]">Sales Summary</p>
         </div>
-        <div class="flex gap-x-7 justify-between">
+        <div class="flex sm:flex-col md:flex-row gap-x-7 justify-between gap-y-5">
             <div class="bg-[#171821] rounded-[10px] p-4  flex flex-col gap-y-2 w-[100%]">
                 <div class="h-10">
                     <img class="w-7 h-8" src="../../assets/dashboard/sales/Group.png" alt="">
