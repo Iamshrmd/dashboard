@@ -62,10 +62,12 @@ export default {
             }
           }
           this.loginCode += val
-
+    },
+    returnTopPrevious(){
+      this.$router.go(-1)
     }
   }
-    }
+}
 
 
 </script>

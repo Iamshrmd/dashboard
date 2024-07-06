@@ -43,6 +43,9 @@ export default {
       .catch((error)=>{
         console.log(error);
       })
+    },
+    returnTopPrevious(){
+      this.$router.go(-1)
     }
   }
 }

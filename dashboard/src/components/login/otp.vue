@@ -60,7 +60,9 @@ export default {
             }
           }
           this.registerCode += val
-
+    },
+    returnTopPrevious(){
+      this.$router.go(-1)
     }
   }
 }
