@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center w-full h-screen">
-    <div class="flex flex-col gap-2 bg-[#21222D] p-5 rounded gap-y-5 w-1/3 ">
+    <div class="flex flex-col gap-2 bg-[#21222D] p-5 rounded gap-y-5 md:w-1/3 sm:w-1/2 ">
         <h3 class="text-center text-[#F2C8ED]">ثبت نام</h3>
         <span class="text-[#F2C8ED] text-sm text-center">  {{ phoneNumber }} : شماره   </span>
         <span class="w-full bg-[#F2C8ED] h-px rounded opacity-50"></span>
