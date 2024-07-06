@@ -1,7 +1,13 @@
+<template>
+  <section class="w-full min-h-screen">
+    <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
+    <dashboardInformation :dashTitle="dashTitle"/>
+  </section>
+</template>
+
 <script>
-import { RouterView } from 'vue-router'
 export default {
-  components:{Sidebar,dashboardInformation,firstPage,loginForm,register,otp},
+    components:{Sidebar,dashboardInformation,firstPage,loginForm,register,otp},
   data(){
     return{
       dashTitle:'dashboard',
@@ -125,14 +131,11 @@ export default {
       })
     }
   }
+
+
 }
 </script>
 
-<template>
-  <div>
-    <RouterView></RouterView>
-  </div>
-</template>
+<style>
 
-<style >
 </style>

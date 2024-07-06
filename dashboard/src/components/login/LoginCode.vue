@@ -43,8 +43,8 @@ export default {
       .then((response)=>{
         console.log(response);
         console.log(response.status);
-        if (condition) {
-            this.$router.push('/')
+        if (response.status == 200) {
+            this.$router.push('/Dashboard')
         }
       })
       .catch((error)=>{
