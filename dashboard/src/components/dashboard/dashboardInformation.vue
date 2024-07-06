@@ -1,7 +1,6 @@
 <template>
         <div @click="f" class="w-full h-screen no-scrollbar overflow-auto px-12 py-4 bg-[#171821]" >
             <HeaderPage/>
-            <!-- <p v-if="dashTitle !== 'dashboard'" class="text-[#fff]">{{ dashTitle }}</p> -->
             <Dashboard v-if="dashTitle == 'dashboard'"/>
             <Order v-if="dashTitle == 'Order'"/>
         </div>

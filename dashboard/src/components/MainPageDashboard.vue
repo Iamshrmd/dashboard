@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full min-h-screen">
+  <section class="w-full min-h-screen flex">
     <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
     <dashboardInformation :dashTitle="dashTitle"/>
   </section>
@@ -9,7 +9,7 @@
 import dashboardInformation from '../components/dashboard/dashboardInformation.vue'
 import Sidebar from '../components/dashboard/Sidebar.vue'
 export default {
-    components:{Sidebar,dashboardInformation},
+    components:{Sidebar, dashboardInformation},
   data(){
     return{
       dashTitle:'dashboard',
