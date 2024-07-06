@@ -3,9 +3,9 @@
     <div class="flex flex-col gap-2 bg-[#21222D] p-5 rounded gap-y-5 md:w-1/3 sm:w-1/2">
         <h3 class="text-center text-[#A9DFD8]">ورود</h3>
         <span class="w-full bg-[#A9DFD8] h-px opacity-50"></span>
-        <div class="flex flex-col justify-center gap-y-5">
+        <div @keyup.enter="sendLogonCode(phonenumber)" class="flex flex-col justify-center gap-y-5">
             <input v-model="phonenumber" class="block bg-opacity-10 bg-[#fff] text-[#A9DFD8] h-10 px-3 text-right rounded outline-none" type="text">
-            <input class="block bg-opacity-10 bg-[#fff] text-[#A9DFD8] h-10 px-3 text-right rounded outline-none" type="text" placeholder="رمز حساب کاربری">
+            <input autofocus class="block bg-opacity-10 bg-[#fff] text-[#A9DFD8] h-10 px-3 text-right rounded outline-none" type="text" placeholder="رمز حساب کاربری">
             <button class="h-10 rounded bg-[#A9DFD8] bg-opacity-10 text-[#A9DFD8] border border-[#A9DFD8]">تایید</button>
             <button @click="sendLogonCode(phonenumber)" class="text-[#fff] cursor-pointer">ورود با کد یکبار مصرف</button>
             <div class="cursor-pointer flex items-center gap-x-2">

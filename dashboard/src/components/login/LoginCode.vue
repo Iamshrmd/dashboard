@@ -5,8 +5,8 @@
         <p class="text-center text-[#A9DFD8] text-sm"> کدی که به شماره {{ phoneNumber}} ارسال شد رو وارد کنید</p>
         <span class="w-full bg-[#A9DFD8] h-px opacity-50"></span>
         <div class="flex flex-col justify-center gap-y-5">
-          <div class="inputs flex items-center justify-center gap-x-5">
-            <input @input="sumOptCode" inputmode="numeric" maxlength="1" class="text-center w-12 h-12 border border-[#A9DFD8] rounded inline-block bg-[#21222D] text-[#fff]">
+          <div @keyup.enter="CheckLoginCode(loginCode)" class="inputs flex items-center justify-center gap-x-5">
+            <input autofocus @input="sumOptCode" inputmode="numeric" maxlength="1" class="text-center w-12 h-12 border border-[#A9DFD8] rounded inline-block bg-[#21222D] text-[#fff]">
             <input @input="sumOptCode" inputmode="numeric" maxlength="1" class="text-center w-12 h-12 border border-[#A9DFD8] rounded inline-block bg-[#21222D] text-[#fff]">
             <input @input="sumOptCode" inputmode="numeric" maxlength="1" class="text-center w-12 h-12 border border-[#A9DFD8] rounded inline-block bg-[#21222D] text-[#fff]">
             <input @input="sumOptCode" inputmode="numeric" maxlength="1" class="text-center w-12 h-12 border border-[#A9DFD8] rounded inline-block bg-[#21222D] text-[#fff]">

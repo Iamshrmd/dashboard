@@ -4,8 +4,8 @@
         <h3 class="text-center text-[#F2C8ED]">ثبت نام</h3>
         <span class="text-[#F2C8ED] text-sm text-center">  {{ phoneNumber }} : شماره   </span>
         <span class="w-full bg-[#F2C8ED] h-px rounded opacity-50"></span>
-        <div class="flex flex-col justify-center gap-y-5">
-            <input v-model="userName" class="block bg-opacity-10 bg-[#fff] text-[#F2C8ED] h-10 px-3 text-right rounded outline-none" type="text" placeholder="نام">
+        <div @keyup.enter="addUser(userName,userLastName)" class="flex flex-col justify-center gap-y-5">
+            <input autofocus v-model="userName" class="block bg-opacity-10 bg-[#fff] text-[#F2C8ED] h-10 px-3 text-right rounded outline-none" type="text" placeholder="نام">
             <input v-model="userLastName" class="block bg-opacity-10 bg-[#fff] text-[#F2C8ED] h-10 px-3 text-right rounded outline-none" type="text" placeholder="نام خانوادگی">
             <button @click="addUser(userName,userLastName)" class="h-10 rounded bg-[#F2C8ED] bg-opacity-10 text-[#F2C8ED] border border-[#F2C8ED]">تایید</button>
             <div class="cursor-pointer flex items-center gap-x-2">
