@@ -1,8 +1,13 @@
 <script>
-import Sidebar from "./components/Sidebar.vue";
-import dashboardInformation from "./components/dashboardInformation.vue"
+import Sidebar from "./components/dashboard/Sidebar.vue";
+import dashboardInformation from "./components/dashboard/dashboardInformation.vue"
+import firstPage from "./components/login/firstPage.vue"
+import loginForm from "./components/login/loginForm.vue"
+import register from "./components/login/register.vue"
+import otp from "./components/login/otp.vue"
+import { RouterView } from 'vue-router'
 export default {
-  components:{Sidebar,dashboardInformation},
+  components:{Sidebar,dashboardInformation,firstPage,loginForm,register,otp},
   data(){
     return{
       dashTitle:'dashboard',
@@ -130,9 +135,16 @@ export default {
 </script>
 
 <template>
-  <div class="w-full min-h-screen flex gap-x-0">
-    <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
-    <dashboardInformation :dashTitle="dashTitle"/>
+  <div class="w-full min-h-screen ">
+    <!-- <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/> -->
+    <!-- <dashboardInformation :dashTitle="dashTitle"/> -->
+     <!-- <firstPage/>
+     <loginForm/>
+     <register/>
+     <otp/> -->
+
+    <RouterView>
+    </RouterView>
   </div>
 </template>
 
