@@ -34,17 +34,16 @@ export default {
   },
   methods:{
     CheckRegisterCode(ResgisterCode){
-      console.log("register"+ ResgisterCode);
       axios
       .post('https://core.ccgram.ir/api/v1/register/verify',{
         phone :  localStorage.getItem('phone'),
         code : ResgisterCode
       })
       .then((response)=>{
-        console.log(response);
         if (response.status == 200) {
             this.$router.push('/Dashboard')
         }
+        localStorage.setItem('Token',response.data.token)
       })
       .catch((error)=>{
         console.log(error);

@@ -42,10 +42,10 @@ export default {
       })
       .then((response)=>{
         console.log(response);
-        console.log(response.status);
         if (response.status == 200) {
             this.$router.push('/Dashboard')
         }
+        localStorage.setItem('Token',response.data.token)
       })
       .catch((error)=>{
         console.log(error);

@@ -1,22 +1,22 @@
 <template>
   <section class="w-full min-h-screen flex">
     <Sidebar @removeBlackImgs="removeBlackImgs" @showdashitem="showDashItem" @toggleIcon="toggleicon" :iconImgs="iconImgs"/>
-    <dashboardInformation :dashTitle="dashTitle"/>
+    <dashboardInformation :dashTitle="dashTitle" />
   </section>
 </template>
 
 <script>
-import dashboardInformation from '../components/dashboard/dashboardInformation.vue'
-import Sidebar from '../components/dashboard/Sidebar.vue'
+import dashboardInformation from '../components/information/dashboardInformation.vue'
+import Sidebar from '../components/information/Sidebar.vue'
 export default {
     components:{Sidebar, dashboardInformation},
   data(){
     return{
-      dashTitle:'dashboard',
+      dashTitle:'Dashboard',
       iconImgs : [
         {
           titleVisible:false,
-          title:"dashboard",
+          title:"Dashboard",
           iconVisible:false,
           imgVisible:false,
           img:"src/assets/icons/home.png",
@@ -48,7 +48,7 @@ export default {
         },
         {
           titleVisible:false,
-          title:"Product",
+          title:"Projects",
           imgVisible:false,
           iconVisible:false,
           blackImg:"src/assets/icons/bag-black.png",
